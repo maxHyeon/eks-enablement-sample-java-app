@@ -1,0 +1,2 @@
+helm install --debug --dry-run workshop /Users/maxhyeon/workspace/partner-enablement/workshop-example-app
+helm install --debug --dry-run workshop /Users/maxhyeon/workspace/partner-enablement/workshop-example-app

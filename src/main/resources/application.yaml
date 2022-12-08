@@ -1,0 +1,10 @@
+configmap-test:
+  value: ${CM_VALUE:notInjected}
+cloud:
+  aws:
+    region: ap-northeast-2
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
