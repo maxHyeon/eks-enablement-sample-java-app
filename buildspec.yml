@@ -1,5 +1,8 @@
 version: 0.2
 phases:
+  install:
+    runtime-versions:
+      java: corretto11
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
@@ -12,6 +15,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - mvn package -DskipTests
       - docker build -f Dockerfile-layered -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
