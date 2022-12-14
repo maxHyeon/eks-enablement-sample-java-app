@@ -33,5 +33,11 @@ artifacts:
     - build-infos.yml
   name: build-result
 
+cache:
+  paths:
+    - '/root/.m2/**/*'
+    - '/root/.npm/**/*'
+    - 'build/**/*'
+
 
 
